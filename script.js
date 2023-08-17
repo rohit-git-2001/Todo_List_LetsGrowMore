@@ -6,9 +6,12 @@
 let input = document.getElementById("input"); // Taking Input Bar
 let add = document.getElementById("addbtn"); // Taking Add Button
 let clearAll = document.getElementById("clrbtn"); // Taking Clear Button
-
+let ol = document.getElementById("orderedList");
 // Add button for add iung further Todos for list
 add.addEventListener("click", (event) => {
+  if (ol.children[0].className == "emp1") {
+    ol.children[0].remove();
+  }
   if (input.value === "") {
     alert("Not a Valid Input, Please provide valid Input here.");
   } else {
@@ -28,7 +31,6 @@ clearAll.addEventListener("click", (event) => {
   document.getElementById("orderedList").innerHTML = "";
   input.value = "";
 
-  let ol = document.getElementById("orderedList");
   if (ol.children.length <= 0) {
     let h3 = document.createElement("h3");
     h3.classList.add("emp1");
@@ -40,7 +42,6 @@ clearAll.addEventListener("click", (event) => {
 // Remove button of lists
 function removeList(e) {
   e.parentElement.remove();
-  let ol = document.getElementById("orderedList");
   if (ol.children.length <= 0) {
     let h3 = document.createElement("h3");
     h3.classList.add("emp1");
