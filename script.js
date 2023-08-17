@@ -7,11 +7,29 @@ let input = document.getElementById("input"); // Taking Input Bar
 let add = document.getElementById("addbtn"); // Taking Add Button
 let clearAll = document.getElementById("clrbtn"); // Taking Clear Button
 
-add.addEventListener("click", () => {
+// Add button for add iung further Todos for list 
+add.addEventListener("click", (event) => {
+  if (input.value === "") {
+    alert("Not a Valid Input, Please provide valid Input here.");
+  } else {
+    event.preventDefault();
     let li = document.createElement("li");
     li.innerHTML = `<h3 style="display: inline-block;">${input.value}</h3>
-    <button id="listDelete"">x</button>
+    <button id="listDelete" onclick="removeList(this)">x</button>
     <br>`;
     document.getElementById("orderedList").appendChild(li);
     input.value = "";
+  }
 });
+
+// Remove button of lists
+function removeList(e) {
+  e.parentElement.remove();
+  let ol = document.getElementById("orderedList");
+  if (ol.children.length <= 0) {
+    let h3 = document.createElement("h3");
+    h3.classList.add("emp1");
+    h3.innerText = `Insert Todo Here`;
+    ol.appendChild(h3);
+  }
+}
