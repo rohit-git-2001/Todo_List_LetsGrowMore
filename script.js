@@ -19,7 +19,8 @@ add.addEventListener("click", (event) => {
     let li = document.createElement("li");
     li.innerHTML = `<h3 style="display: inline-block;">${input.value}</h3>
     <button id="listDelete" onclick="removeList(this)">x</button>
-    <br>`;
+    <br />
+    <br />`;
     document.getElementById("orderedList").appendChild(li);
     input.value = "";
   }
