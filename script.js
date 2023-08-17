@@ -7,7 +7,7 @@ let input = document.getElementById("input"); // Taking Input Bar
 let add = document.getElementById("addbtn"); // Taking Add Button
 let clearAll = document.getElementById("clrbtn"); // Taking Clear Button
 
-// Add button for add iung further Todos for list 
+// Add button for add iung further Todos for list
 add.addEventListener("click", (event) => {
   if (input.value === "") {
     alert("Not a Valid Input, Please provide valid Input here.");
@@ -19,6 +19,21 @@ add.addEventListener("click", (event) => {
     <br>`;
     document.getElementById("orderedList").appendChild(li);
     input.value = "";
+  }
+});
+
+// clear button to remove all item of list
+clearAll.addEventListener("click", (event) => {
+  event.preventDefault();
+  document.getElementById("orderedList").innerHTML = "";
+  input.value = "";
+
+  let ol = document.getElementById("orderedList");
+  if (ol.children.length <= 0) {
+    let h3 = document.createElement("h3");
+    h3.classList.add("emp1");
+    h3.innerText = `Insert Todo Here`;
+    ol.appendChild(h3);
   }
 });
 
