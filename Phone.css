@@ -81,4 +81,23 @@
             }
         }
     }
+
+
+    .listContainer{
+        border: 1px solid red;
+        width: 90%;
+        font-size: 15px;
+    }
+
+    #input,
+    #clrbtn,
+    #addbtn{
+        height: 30px;
+        font-size: 15px;
+    }
+
+    #listDelete{
+        height: 25px;
+        font-size: 20px;
+    }
 }
