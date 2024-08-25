@@ -9,7 +9,7 @@ let clearAll = document.getElementById("clrbtn"); // Taking Clear Button
 let ol = document.getElementById("orderedList");
 // Add button for add iung further Todos for list
 add.addEventListener("click", (event) => {
-  if (ol.children[0].className == "emp1") {
+  if (ol.children[0].className == "emp1" && input.value != "") {
     ol.children[0].remove();
   }
   if (input.value === "") {
