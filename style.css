@@ -26,11 +26,12 @@ body {
 .container {
   background-color: rgba(0, 0, 0, 0.7);
   height: 70vh;
-  width: 50vw;
+  width: 60%;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
 }
+
 
 .todo-head h1 {
   text-align: center;
@@ -86,11 +87,13 @@ body {
 
 .todoContainer {
   background-color: rgba(0, 0, 0, 0.7);
-  height: 100vh;
+  height: 90vh;
   width: 40vw;
   display: flex;
+  border-radius: 7px;
   flex-direction: column;
-  overflow: scroll;
+  overflow: auto;
+  overflow-x: hidden;
 }
 
 .todo-head1 h1 {
@@ -135,7 +138,7 @@ body {
   padding: 0 20px;
   border-radius: 5px;
   cursor: pointer;
-  background-color:#f76b1c;
+  background-color: #f76b1c;
   transition: all 0.2s;
 }
 
@@ -175,7 +178,7 @@ body {
   border-radius: 5px;
   font-size: 24px;
   list-style: 30px;
-  background-color:#f76b1c;
+  background-color: #f76b1c;
   color: #000;
   cursor: pointer;
 }
@@ -184,5 +187,3 @@ body {
   box-shadow: 0px 1px 3px #fff;
   color: #fff;
 }
-
-
