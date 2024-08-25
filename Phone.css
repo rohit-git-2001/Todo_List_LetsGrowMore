@@ -1,1 +1,11 @@
 /* CSS for small screen */
+@media (max-width: 375px) {
+    .container {
+      width: 90%;
+      overflow-y: auto;
+
+      
+    }
+
+
+  }
