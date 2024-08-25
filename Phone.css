@@ -1,11 +1,25 @@
 /* CSS for small screen */
 @media (max-width: 375px) {
     .container {
-      width: 90%;
-      overflow-y: auto;
+        width: 90%;
+        overflow-y: auto;
 
-      
+        h1 {
+            font-size: 20px;
+            text-align: left;
+        }
+
+        .todo-body {
+            display: flex;
+            flex-direction: column;
+
+            p {
+                font-size: 20px;
+                padding: 19px;
+            }
+
+        }
     }
 
 
-  }
+}
